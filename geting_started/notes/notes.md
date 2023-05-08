@@ -1,3 +1,5 @@
+<!-- vim: conceallevel=0 colorcolumn=80 textwidth=79 linebreak
+-->
 # Notes
 
 ## Dependencies
@@ -16,7 +18,10 @@
 - Create a new project: `ng new angular-tour-of-heroes`
 - All by default: (Enter or return key)
 
-This generate a skeleton application
+`ng new` generate a new *Angular workspace* and new application skeleton
+
+The workspace configuration file is: `angular.json` -> `ng config`
+command manipulate the configurations
 
 ## Serve application
 
@@ -64,3 +69,18 @@ This is the general CSS to entire application
 ng generate component heroes
 ```
 
+This make:
+
+```sh
+CREATE src/app/villians/villians.component.css
+CREATE src/app/villians/villians.component.html
+CREATE src/app/villians/villians.component.spec.ts
+CREATE src/app/villians/villians.component.ts
+UPDATE src/app/app.module.ts 
+```
+
+## Conventions
+
+`(herores)` The component name ->  Plural
+`(NgIf)` Directive Class -> PascalCase
+`(ngIf)` Directive instance -> CamesCase

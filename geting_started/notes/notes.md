@@ -79,6 +79,38 @@ CREATE src/app/villians/villians.component.ts
 UPDATE src/app/app.module.ts 
 ```
 
+## Hero Interface
+
+Create a interface to use how a general object inside `src/app/hero.ts`
+
+```typescript
+export interface Hero {
+  id: number;
+  name: string;
+}
+```
+
+## NgModule
+
+Inside of  `src/app/app.module.ts`
+
+```typescript
+@NgModule({
+  declarations: [
+    // Componentes
+   ],
+  imports: [
+    //  External modules
+  ],
+  providers: [
+  ],
+  bootstrap: [
+    // Starter component
+    AppComponent,
+  ]
+})
+```
+
 ## Conventions
 
 `(herores)` The component name ->  Plural

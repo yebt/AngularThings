@@ -1,1 +1,10 @@
-<p>villians works!</p>
+
+<h2>My Villians</h2>
+<ul class="villians_list">
+  <li *ngFor="let villian of villians">
+    <button type="button">
+      <span class="badge">{{villian.id}}</span>
+      <span class="name">{{villian.name}}</span>
+    </button>
+  </li>
+</ul>

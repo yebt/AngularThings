@@ -1,4 +1,4 @@
-import { Villian } from "./villian";
+import { Villian } from './villian';
 export const VILLIANS: Villian[] = [
   { id: 12, name: 'Thanos' },
   { id: 13, name: 'Doctor Doom' },
@@ -8,5 +8,5 @@ export const VILLIANS: Villian[] = [
   { id: 17, name: 'Carnage' },
   { id: 18, name: 'Magneto' },
   { id: 19, name: 'Mystique' },
-  { id: 20, name: 'Kingpin' }
+  { id: 20, name: 'Kingpin' },
 ];

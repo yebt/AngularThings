@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // <-- Ng Model to love here
 
 import { AppComponent } from './app.component';
 import { VilliansComponent } from './villians/villians.component';
@@ -10,7 +11,8 @@ import { VilliansComponent } from './villians/villians.component';
     VilliansComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

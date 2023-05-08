@@ -7,6 +7,7 @@ import { VilliansComponent } from './villians/villians.component';
 @NgModule({
   declarations: [
     AppComponent,
+    VilliansComponent,
   ],
   imports: [
     BrowserModule

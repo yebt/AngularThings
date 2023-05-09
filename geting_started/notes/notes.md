@@ -111,6 +111,43 @@ Inside of  `src/app/app.module.ts`
 })
 ```
 
+## Communication between components
+
+Use `@input() varname?:type` to load value send by parent component
+`<app-child-component [varname]="expression or parent avar"> ...`
+
+## Ng services
+
+```sh
+ng generate service hero
+```
+
+Create:
+
+```sh
+CREATE src/app/hero.service.spec.ts (362 bytes)
+CREATE src/app/hero.service.ts (136 bytes)
+```
+
+## Ng Modules
+
+```sh
+ng generate module app-routing --flat --module=app  
+```
+
+Generate:
+
+```sh
+CREATE src/app/app-routing.module.ts (196 bytes)
+UPDATE src/app/app.module.ts (874 bytes)
+```
+
+| Parametter      | Details                                                                 |
+| --------------- | ---------------                                                         |
+| `--flat	`       | Puts the file in src/app instead of its own directory.                  |
+| `--module=app`  | Tells ng generate to register it in the imports array of the AppModule. |
+
+
 ## Conventions
 
 `(herores)` The component name ->  Plural

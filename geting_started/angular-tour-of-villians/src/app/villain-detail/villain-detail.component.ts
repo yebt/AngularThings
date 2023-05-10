@@ -12,11 +12,14 @@ import { VillainService } from '../villain.service';
   styleUrls: ['./villain-detail.component.css']
 })
 export class VillainDetailComponent implements OnInit {
+  goBack() :void {
+    this.location.back();
+  }
 
   @Input() villaintd?: Villain;
   constructor(
     private route: ActivatedRoute,
-    private villainServide :  VillainService,
+    private villainServide: VillainService,
     private location: Location
   ) { }
 
@@ -24,13 +27,13 @@ export class VillainDetailComponent implements OnInit {
     this.getActualVillain()
   }
 
-  getActualVillain(): void{
+  getActualVillain(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'))
-    this.villainServide.getVillian(id)
-    .subscribe({
-      next: (villain) => {this.villaintd = villain},
-        error: (err) => {console.log("Error:",err)}
-    })
+    this.villainServide.getVillianById(id)
+      .subscribe({
+        next: (villain) => { this.villaintd = villain },
+        error: (err) => { console.log("Error:", err) }
+      })
   }
 
 }

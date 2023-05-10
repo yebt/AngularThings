@@ -50,8 +50,12 @@ body,
 input[type="text"],
 button {
   /* color: #333; */
-  color: var(--ctp-mocha-subtext0);
+  color: var(--ctp-mocha-subtext1);
   font-family: Cambria, Georgia, serif;
+}
+input {
+  background: var(--ctp-mocha-mantle);
+  border: none;
 }
 button {
   background-color: var(--ctp-mocha-lavender);

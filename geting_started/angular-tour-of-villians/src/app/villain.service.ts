@@ -20,10 +20,10 @@ export class VillainService {
     this.messageService.add("VillainService: fetched  villains");
     return villains;
   }
-  getVillian(id: number): Observable<Villain> {
+  getVillianById(id: number): Observable<Villain> {
     const villain = VILLIANS.find(v => v.id === id)!;
-    this.messageService.add(`VillainService:   fetched id=${id}`);
-    return of(villain)
+    this.messageService.add(`VillainService: fetched villain by id=${id}`);
+    return of(villain);
 
   }
 }

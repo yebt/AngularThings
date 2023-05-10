@@ -1,79 +1,61 @@
-/*.villain_ulComponent's private CSS styles */
-.villain_ul {
+/* villains_ulComponent's private CSS styles */
+.villains_ul {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
 }
-
-.villain_ul li {
-  display: flex;
-}
-
-.villain_ul button {
-  flex: 1;
-  cursor: pointer;
+.villains_ul li {
   position: relative;
-  left: 0;
-  /* background-color: #EEE; */
-  background-color: var(--ctp-mocha-subtext1);
-  margin: .5em;
-  padding: 0;
-  border-radius: 4px;
-  display: flex;
-  align-items: stretch;
-  height: 1.8em;
+  cursor: pointer;
 }
 
-.villain_ul button:hover {
-  /* color: #2c3a41; */
-  color: var(--ctp-mocha-surface0);
-  /* background-color: #e6e6e6; */
-  background-color: var(--ctp-mocha-subtext0);
+.villains_ul li:hover {
   left: .1em;
 }
 
-.villain_ul button:active {
+.villains_ul a {
+  /* color: #333; */
+  color: var(--ctp-mocha-mantle);
+  text-decoration: none;
+  /* background-color: #EEE; */
+  background-color: var(--ctp-mocha-lavender);
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.villains_ul a:hover {
+  /* color: #2c3a41; */
+  color: var(--ctp-mocha-surface1);
+  /* background-color: #e6e6e6; */
+  background-color: var(--ctp-mocha-subtext1);
+}
+
+.villains_ul a:active {
   /* background-color: #525252; */
-  background-color: var(--ctp-mocha-overlay1);
+  background-color: var(--ctp-mocha-overlay0);
   /* color: #fafafa; */
   color: var(--ctp-mocha-text);
 }
 
-.villain_ul button.selected {
-  /* background-color: black; */
-  background-color: var(--ctp-mocha-crust);
-  /* color: white; */
-  color: var(--ctp-mocha-text);
-}
-
-.villain_ul button.selected:hover {
-  /* background-color: #505050; */
-  background-color: var(--ctp-mocha-overlay0);
-  /* color: white; */
-  /* color: white; */
-  color: var(--ctp-mocha-text);
-}
-
-.villain_ul button.selected:active {
-  /* background-color: black; */
-  background-color: var(--ctp-mocha-blue);
-  /* color: white; */
-  color: var(--ctp-mocha-text);
-}
-
-.villain_ul .badge {
+.villains_ul .badge {
   display: inline-block;
   font-size: small;
   color: white;
   padding: 0.8em 0.7em 0 0.7em;
   /* background-color: #405061; */
-  background-color: var(--ctp-mocha-surface1);
+  background-color: var(--ctp-mocha-surface0);
   line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
-}
-
-.villain_ul .name {
-  align-self: center;
 }

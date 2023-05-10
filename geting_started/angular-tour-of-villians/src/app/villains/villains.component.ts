@@ -42,12 +42,13 @@ export class VillainsComponent implements OnInit {
     });
   }
 
-  selectedVillain?: Villain;
+  // REMOVED
+  // selectedVillain?: Villain;
 
-  onSelect(villain: Villain): void {
-    this.selectedVillain = villain;
-    this.messageService.add(`VillainsComponent:  Selected Villain id => ${villain.id}`)
-  }
+  // onSelect(villain: Villain): void {
+  //   this.selectedVillain = villain;
+  //   this.messageService.add(`VillainsComponent:  Selected Villain id => ${villain.id}`)
+  // }
 
   // villain:  Villain = {
   //   id : 1,

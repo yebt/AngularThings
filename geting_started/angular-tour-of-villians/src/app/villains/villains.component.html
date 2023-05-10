@@ -1,11 +1,16 @@
 <h2>My Villains</h2>
-<ul class="villain_ul">
+<ul class="villains_ul">
   <li *ngFor="let villain of villains" >
-    <button type="button" (click)="onSelect(villain)" [class.selected]="villain === selectedVillain">
-      <span class="badge">{{ villain.id }}</span>
-      <span class="name">{{ villain.name }}</span>
-    </button>
+    <!-- <button type="button" (click)="onSelect(villain)" [class.selected]="villain === selectedVillain"> -->
+    <!--   <span class="badge">{{ villain.id }}</span> -->
+    <!--   <span class="name">{{ villain.name }}</span> -->
+    <!-- </button> -->
+    <a routerLink="/detail/{{villain.id}}">
+      <span class="badge">{{villain.id}}</span> {{villain.name}}
+    </a>
+    
   </li>
 </ul>
 
-<app-villain-detail [villaintd]="selectedVillain"></app-villain-detail>
+<!--Moved toroute-->
+<!-- <app-villain-detail [villaintd]="selectedVillain"></app-villain-detail> -->

@@ -32,7 +32,16 @@ export class VillainsComponent implements OnInit {
     // .subscribe(
     //   villains_data  => this.villains = villains_data
     // )
-    this.villainService.getVilliansAsync().subscribe({
+
+    // this.villainService.getVilliansAsync().subscribe({
+    //   next: (value) => {
+    //     this.villains = value;
+    //   },
+    //   error: (error) => {
+    //     console.log('Error', error);
+    //   },
+    // });
+    this.villainService.getVillainsHttp().subscribe({
       next: (value) => {
         this.villains = value;
       },
@@ -55,4 +64,18 @@ export class VillainsComponent implements OnInit {
   //   name: 'Thanos',
   //   nickname: 'The mad titan'
   // }
+
+  add(name: string): void {
+    name = name.trim();
+    this.villainService.addVillainHttp({ name } as Villain)
+      .subscribe(
+        new_villain => {
+          this.villains.push(new_villain)
+        });
+  }
+
+  delete(villain_to_del:Villain):void {
+    this.villains = this.villains.filter(v => v !== villain_to_del);
+    this.villainService.deleteVillain(villain_to_del.id).subscribe();
+  }
 }

@@ -13,9 +13,15 @@ export class DashboardComponent implements OnInit {
   constructor(private villainService: VillainService) { }
 
   getVillains(): void {
-    this.villainService.getVilliansAsync()
+    // this.villainService.getVilliansAsync()
+    //   .subscribe({
+    //     next: (value) => this.villains = value.slice(1, 5), // get the first 5 heroes
+    //     error: (err) => { console.log("ERROR: ", err) }
+    //   })
+
+    this.villainService.getVillainsHttp()
       .subscribe({
-        next: (value) => this.villains = value.slice(1,5), // get the first 5 heroes
+        next: (value) => this.villains = value.slice(1, 5), // get the first 5 heroes
         error: (err) => { console.log("ERROR: ", err) }
       })
   }

@@ -12,14 +12,24 @@ import { VillainService } from '../villain.service';
   styleUrls: ['./villain-detail.component.css']
 })
 export class VillainDetailComponent implements OnInit {
-  goBack() :void {
+
+  // replace the go back function
+  save(): void {
+    if (this.villaintd) {
+      this.villainServise.updateVillain(this.villaintd)
+      .subscribe(
+        () => this.goBack()
+      )
+    }
+  }
+  goBack(): void {
     this.location.back();
   }
 
   @Input() villaintd?: Villain;
   constructor(
     private route: ActivatedRoute,
-    private villainServide: VillainService,
+    private villainServise: VillainService,
     private location: Location
   ) { }
 
@@ -29,7 +39,13 @@ export class VillainDetailComponent implements OnInit {
 
   getActualVillain(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'))
-    this.villainServide.getVillianById(id)
+    // this.villainServide.getVillianById(id)
+    //   .subscribe({
+    //     next: (villain) => { this.villaintd = villain },
+    //     error: (err) => { console.log("Error:", err) }
+    //   })
+
+    this.villainServise.getVillianByIdHttp(id)
       .subscribe({
         next: (villain) => { this.villaintd = villain },
         error: (err) => { console.log("Error:", err) }
